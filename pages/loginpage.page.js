@@ -1,0 +1,39 @@
+const { expect } = require('@playwright/test');
+
+exports.LoginPage = class LoginPage {
+
+       /**
+   * @param {import('@playwright/test').Page} page
+   */
+
+    constructor(page){
+        this.page = page;
+        this.userName = page.getByRole('textbox', { name: 'Username' });
+        this.userPassword = page.getByRole('textbox', { name: 'Password' })
+        this.loginButton = page.getByRole('button', { name: 'Login' });
+        this.logoutItem = page.getByRole('listitem').filter({ hasText: 'Pratik Parajuli' }).locator('i');
+        this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
+        this.error_msg = page.getByRole('alert').locator('div').filter({ hasText: 'Invalid credentials' });
+    }   
+
+    async gotoLogin(){
+        await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    }
+    async loginCredentials(username, password){
+        await this.userName.fill(username);
+        await this.userPassword.fill(password);
+    }
+    async loginBtn(){
+        await this.loginButton.click({ timeout: 30 * 5000 });
+    }
+    async logoutItemBtn(){
+        await this.logoutItem.click({ timeout: 30 * 5000 });
+    }
+    async logoutBtn(){
+        // await page.getByRole('listitem').filter({ hasText: 'Pratik Parajuli' }).locator('i').click();
+        await this.logoutButton.click({ timeout: 30 * 5000 });
+    }
+    async verifyerr_msg(){
+        await expect(this.error_msg).toHaveText('Invalid credentials');
+    }
+}
