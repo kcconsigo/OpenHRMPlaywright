@@ -1,4 +1,4 @@
-<h1 align="center">My Playwright End to End Automation Test Framework
+<h1 align="center">My Playwright End to End Testing Automation Test Framework
 
 Project Name: demo.orangehrmlive-Playwright Project End to End test built in Page Object Model</h1>
 
