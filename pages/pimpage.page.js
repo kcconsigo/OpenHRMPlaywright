@@ -37,7 +37,7 @@ exports.PimPage = class PimPage {
         await this.addempTab.nth(2).click();
         await this.page.waitForTimeout(2000);
     }
-    async addEmployeeDetails(firstName, middleName, lastName, empID){
+    async addEmployeeDetails(firstName, middleName, lastName, empID, nationality, maritalstatusOpt){
         await this.addEmpFirstName.fill(firstName);
         await this.addEmpMidName.fill(middleName);
         await this.addEmpLastName.fill(lastName);
@@ -47,10 +47,10 @@ exports.PimPage = class PimPage {
             
         }).toPass();
         await expect(this.successfullyMsg).toBeVisible();
-        await this.addEmpNationalityField.nth(0).click();
-        await this.addEmpNationalityselect.click();
+        await this.addEmpNationalityField.nth(0).click();       
+        await this.page.getByRole('option', { name: nationality }).click();
         await this.addEmpMaritalStatusField.nth(1).click();
-        await this.addEmpMaritalStatusSelect.click();
+        await this.page.getByRole('option', { name: maritalstatusOpt }).click();
         await this.addEmpInfoSave.nth(1).click();
     }
     async employeeListlandingTab(firstName){
