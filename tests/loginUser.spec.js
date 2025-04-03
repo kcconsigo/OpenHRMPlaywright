@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Login Page', () => {
-  test(`should allow me to enter valid credentials ${credentials.validCredentials.username}, ${credentials.validCredentials.password}`, async ({ page }) => {
+  test(`should allow me to enter valid credentials ${credentials.validCredentials.username}, ${credentials.validCredentials.password},`, async ({ page }) => {
 
     const loginpage = new LoginPage(page);
     await loginpage.gotoLogin();
@@ -24,6 +24,5 @@ test.describe('Login Page', () => {
     await loginpage.loginCredentials(credentials.invalidCredentials.username, credentials.invalidCredentials.password);
     await loginpage.loginBtn();
     await loginpage.verifyerr_msg();
-
   });
 });

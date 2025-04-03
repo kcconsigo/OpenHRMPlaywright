@@ -11,7 +11,7 @@ exports.LoginPage = class LoginPage {
         this.userName = page.getByRole('textbox', { name: 'Username' });
         this.userPassword = page.getByRole('textbox', { name: 'Password' })
         this.loginButton = page.getByRole('button', { name: 'Login' });
-        this.logoutItem = page.getByRole('listitem').filter({ hasText: 'Pratik Parajuli' }).locator('i');
+        this.logoutItem = page.locator('.oxd-userdropdown');
         this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
         this.error_msg = page.getByRole('alert').locator('div').filter({ hasText: 'Invalid credentials' });
     }   
@@ -30,7 +30,6 @@ exports.LoginPage = class LoginPage {
         await this.logoutItem.click({ timeout: 30 * 5000 });
     }
     async logoutBtn(){
-        // await page.getByRole('listitem').filter({ hasText: 'Pratik Parajuli' }).locator('i').click();
         await this.logoutButton.click({ timeout: 30 * 5000 });
     }
     async verifyerr_msg(){
