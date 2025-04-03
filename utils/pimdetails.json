@@ -1,0 +1,14 @@
+[
+   { 
+      "firstName" : "Robert James",
+      "middleName" : "Chen",
+      "lastName" : "Schneider", 
+      "empID" : "1207"
+    },
+    {
+      "firstName" : "Ronaldo",
+      "middleName" : "Valdez",
+      "lastName" : "Gibbs", 
+      "empID" : "2402"
+    }
+]
