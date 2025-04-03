@@ -16,7 +16,7 @@ for (const pimdetailspage of pimdetails){
         await pimpage.PimTab();
         await pimpage.addEmpTab();
         await pimpage.addEmployeeDetails(pimdetailspage.firstName, pimdetailspage.middleName, pimdetailspage.lastName, pimdetailspage.empID);
-        await pimpage.employeeListlandingTab(firstName);
+        await pimpage.employeeListlandingTab(pimdetailspage.firstName);
         await loginpage.logoutItemBtn();
         await loginpage.logoutBtn();
       });
