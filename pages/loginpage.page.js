@@ -9,7 +9,7 @@ exports.LoginPage = class LoginPage {
     constructor(page){
         this.page = page;
         this.userName = page.getByRole('textbox', { name: 'Username' });
-        this.userPassword = page.getByRole('textbox', { name: 'Password' })
+        this.userPassword = page.getByRole('textbox', { name: 'Password' });
         this.loginButton = page.getByRole('button', { name: 'Login' });
         this.logoutItem = page.locator('.oxd-userdropdown');
         this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
@@ -33,6 +33,6 @@ exports.LoginPage = class LoginPage {
         await this.logoutButton.click({ timeout: 30 * 5000 });
     }
     async verifyerr_msg(){
-        await expect(this.error_msg).toHaveText('Invalid credentials');
+        return await expect(this.error_msg).toHaveText('Invalid credentials');
     }
 }
