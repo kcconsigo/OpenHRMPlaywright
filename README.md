@@ -6,4 +6,4 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 
 <h4> <b> </b>Framework and Tools used: </b> </h4>
 <h5> Playwright for Automation and node.js and javascript for programming language
-Github Actions and Jenkins for CICD Integration tool </h5>
+<br> Github Actions and Jenkins for CICD Integration tool </br> </h5>
