@@ -1,11 +1,15 @@
-{
-    "validCredentials": {
-            "username": "Admin",
-            "password": "admin123"
+[
+    {
+        "EmpName" : "Robert James Chen Schneider",
+        "UserName" : "Dranreb",
+        "Password" : "D3vT3$t3rR0l305", 
+        "ConfirmPassword" : "D3vT3$t3rR0l305"
     },
+    {
 
-    "invalidCredentials": {
-            "username": "admin@#$$R9^",
-            "password": "%^#$0admin123"      
+        "EmpName" : "Ronaldo Valdez Gibbs",
+        "UserName" : "Yoo Nah",
+        "Password" : "P@$$w0rd$hit@ss2", 
+        "ConfirmPassword" : "P@$$w0rd$hit@ss2"
     }
-}
+]

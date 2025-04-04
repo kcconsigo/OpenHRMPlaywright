@@ -3,23 +3,22 @@ const { LoginPage } = require('../pages/loginpage.page');
 const { AdminPage } = require('../pages/adminpage.page');
 
 const credentials = JSON.parse(JSON.stringify(require("../utils/credentials.json")));
+const admindetails = JSON.parse(JSON.stringify(require("../utils/admindetails.json")));
 
 test.describe('Login Page', () => {
-  test(`should allow me to enter valid credentials ${credentials.validCredentials.username}, ${credentials.validCredentials.password}`, async ({ page }) => {
-
-    const loginpage = new LoginPage(page);
-    await loginpage.gotoLogin();
-    await loginpage.loginCredentials(credentials.validCredentials.username, credentials.validCredentials.password);
-    await loginpage.loginBtn();
-  });
-
-  test(`should not allow me to enter invalid credentials ${credentials.invalidCredentials.username}, ${credentials.invalidCredentials.password}`, async ({ page }) => {
-    const loginpage = new LoginPage(page);
-    await loginpage.gotoLogin();
-    await loginpage.loginCredentials(credentials.invalidCredentials.username, credentials.invalidCredentials.password);
-    await loginpage.loginBtn();
-    await loginpage.verifyerr_msg();
-    await loginpage.logoutItemBtn();
-    await loginpage.logoutBtn();
-  });
+  for(const admindetailspage of admindetails){
+    test(`should allow me to create Admin ${credentials.validCredentials.username}, ${credentials.validCredentials.password}, ${admindetailspage.EmpName}, ${admindetailspage.UserName},${admindetailspage.Password},${admindetailspage.ConfirmPassword}`, async ({ page }) => {
+      const loginpage = new LoginPage(page);
+      await loginpage.gotoLogin();
+      await loginpage.loginCredentials(credentials.validCredentials.username, credentials.validCredentials.password);
+      await loginpage.loginBtn();
+      const adminpage = new AdminPage(page);
+      await adminpage.AdminTab();
+      await adminpage.selectUserRoleAndUserStatus();
+      await adminpage.createNewEmployeeInputTextFields(admindetailspage.EmpName, admindetailspage.UserName, admindetailspage.Password, admindetailspage.ConfirmPassword);
+      await adminpage.clickSavebtn();
+      await loginpage.logoutItemBtn();
+      await loginpage.logoutBtn();
+    });
+  }
 });

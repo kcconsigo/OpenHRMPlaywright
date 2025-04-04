@@ -24,13 +24,13 @@ exports.LoginPage = class LoginPage {
         await this.userPassword.fill(password);
     }
     async loginBtn(){
-        await this.loginButton.click({ timeout: 30 * 5000 });
+        await this.loginButton.click();
     }
     async logoutItemBtn(){
-        await this.logoutItem.click({ timeout: 30 * 5000 });
+        await this.logoutItem.click({ timeout: 5000 });
     }
     async logoutBtn(){
-        await this.logoutButton.click({ timeout: 30 * 5000 });
+        await this.logoutButton.click();
     }
     async verifyerr_msg(){
         return await expect(this.error_msg).toHaveText('Invalid credentials');
