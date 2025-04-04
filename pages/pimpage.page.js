@@ -15,9 +15,7 @@ exports.PimPage = class PimPage {
         this.addEmpID = page.locator('.oxd-input');
         this.addEmpbuttonSave = page.locator('//button[@type="submit"]');
         this.addEmpNationalityField = page.locator('.oxd-select-text.oxd-select-text--active');
-        this.addEmpNationalityselect = page.getByRole('option', { name: 'Australian' });
         this.addEmpMaritalStatusField = page.locator('.oxd-select-text.oxd-select-text--active');
-        this.addEmpMaritalStatusSelect = page.getByRole('option', { name: 'Married' });
         this.addEmpInfoSave = page.locator('//button[@type="submit"]');
         this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
         this.listEmpNavTab = page.locator('.oxd-topbar-body-nav-tab');
@@ -37,7 +35,7 @@ exports.PimPage = class PimPage {
         await this.addempTab.nth(2).click();
         await this.page.waitForTimeout(2000);
     }
-    async addEmployeeDetails(firstName, middleName, lastName, empID, nationality, maritalstatusOpt){
+    async addEmployeeDetails(firstName, middleName, lastName, empID, nationality, maritalstatus){
         await this.addEmpFirstName.fill(firstName);
         await this.addEmpMidName.fill(middleName);
         await this.addEmpLastName.fill(lastName);
@@ -50,7 +48,7 @@ exports.PimPage = class PimPage {
         await this.addEmpNationalityField.nth(0).click();       
         await this.page.getByRole('option', { name: nationality }).click();
         await this.addEmpMaritalStatusField.nth(1).click();
-        await this.page.getByRole('option', { name: maritalstatusOpt }).click();
+        await this.page.getByRole('option', { name: maritalstatus }).click();
         await this.addEmpInfoSave.nth(1).click();
     }
     async employeeListlandingTab(firstName){
@@ -61,8 +59,9 @@ exports.PimPage = class PimPage {
         for(let i = 0; i < Empnames; i++){
             if(await Empnames.toBeVisible()){
                 await Empnames.nth(i).click();
-            }
-            return i;
+                return Empnames;
+            }  
+            return i;          
         }
         await this.listEmpSearchbtn.click();
         await this.editEmplistbtn.nth(3).click();
