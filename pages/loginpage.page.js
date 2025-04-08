@@ -1,4 +1,4 @@
-const { expect } = require('@playwright/test');
+const { expect, chromium } = require('@playwright/test');
 
 exports.LoginPage = class LoginPage {
 
@@ -17,7 +17,11 @@ exports.LoginPage = class LoginPage {
     }   
 
     async gotoLogin(){
+        const browser = await chromium.launch();
+        const context = await browser.newContext();
+        // const page = await context.newPage();
         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        await browser.close();
     }
     async loginCredentials(username, password){
         await this.userName.fill(username);
@@ -27,10 +31,10 @@ exports.LoginPage = class LoginPage {
         await this.loginButton.click();
     }
     async logoutItemBtn(){
-        await this.logoutItem.click({ timeout: 5000 });
+        await this.logoutItem.click({ timeout: 3000 });
     }
     async logoutBtn(){
-        await this.logoutButton.click();
+        await this.logoutButton.click({ timeout: 3000 });
     }
     async verifyerr_msg(){
         return await expect(this.error_msg).toHaveText('Invalid credentials');

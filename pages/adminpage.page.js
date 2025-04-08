@@ -80,19 +80,4 @@ exports.AdminPage = class AdminPage{
      }).toPass();
  
    }
- 
-   async checkAdmin(EmpName){
-    await expect(async () => {
-        const checkAdmin = this.page.getByRole('row', { name: EmpName }).locator('span i');
-     for(let i = 0; i<await checkAdmin.count(); i++)
-     {
-       const rowadminName = await checkAdmin.nth(i).textContent();
-       if(checkAdmin.isVisible(rowadminName))
-       {
-         await checkAdmin.nth(i).locator('span i').check();
-         break;
-       }
-     }
-    }).toPass();
-   }
  }
