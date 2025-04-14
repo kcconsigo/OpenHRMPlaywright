@@ -1,11 +1,13 @@
-[
+{ 
+    "Admins":[
     {
         "EmpName" : "Robert James Chen Schneider",
-        "UserName" : " Dranreb Admin Robert James"
+        "UserName" : "Dranreb"
     },
     {
 
         "EmpName" : "Ronaldo Valdez Gibbs",
-        "UserName" : " Yoo Nah Admin Ronaldo Gibbs"
+        "UserName" : "Yoo Nah"
     }
 ]
+}

@@ -54,7 +54,9 @@ exports.PimPage = class PimPage {
     async employeeListlandingTab(firstName){
         await this.pimmenu.nth(1).click();
         await this.listEmpNavTab.nth(1).click();
-        await this.listEmployeeName.getByPlaceholder('Type for hints...').nth(0).fill(firstName);
+        await this.listEmployeeName.getByPlaceholder('Type for hints...')
+        .nth(0)
+        .fill(firstName);
         const Empnames = this.listEmployeeNameSelect.getByRole('option', { name: firstName });
         for(let i = 0; i < Empnames; i++){
             if(await Empnames.toBeVisible()){

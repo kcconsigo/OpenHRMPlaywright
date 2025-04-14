@@ -36,7 +36,6 @@ exports.AdminPage = class AdminPage{
      this.userDeleteDialogbtn = page.locator('//button[normalize-space()="Yes, Delete"]');
      this.successfullyDeletedUser = page.getByText('SuccessSuccessfully Deleted×');
      this.NorecordsFound = page.getByText('InfoNo Records Found×');
- 
    }
    async AdminTab(){
      await this.adminmenu.nth(0).click();
@@ -54,12 +53,13 @@ exports.AdminPage = class AdminPage{
      const EmpNameSelectList = this.userEmpNameSelect.getByRole('option', { name: EmpName });
      for(let i = 0; i < EmpNameSelectList; ++i )
      {
-       text = await thisuserEmpNameSelect.nth(i).textContent();
+       text = await this.userEmpNameSelect.nth(i).textContent();
        if(text === EmpNameSelectList)
        {
          await this.EmpNameSelectList.nth(i).click();
          break;
        }
+       return EmpNameSelectList;
      }
      await this.userEmpNameSelect.getByRole('option', { name: EmpName }).click();
      await this.username.nth(1).fill(UserName);
