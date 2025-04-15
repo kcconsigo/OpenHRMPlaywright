@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://www.google.com/');
 });
 
-test.describe('Login Page', () => {
+test.describe('Login Page', {tag: '@RegressionTesting'},() => {
   test(`should allow me to enter valid credentials ${credentials.validCredentials.username}, ${credentials.validCredentials.password},`, async ({ page }) => {
 
     const loginpage = new LoginPage(page);
