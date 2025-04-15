@@ -21,6 +21,7 @@ exports.LoginPage = class LoginPage {
         const context = await browser.newContext();
         // const page = await context.newPage();
         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        await expect(this.page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
         await browser.close();
     }
     async loginCredentials(username, password){
