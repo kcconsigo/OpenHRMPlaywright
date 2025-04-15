@@ -14,17 +14,17 @@ exports.AdminDashboardPage = class AdminDashboardPage{
    async admindetailsRecords(UserName){  
     await this.page.mouse.wheel(0, 100);        
     await this.page.mouse.move(20, 40);
-    const adminCheckBox = await this.page.getByRole('row', { name: UserName }).locator('label').first().check();
-    const rowsUsername = await adminCheckBox.count();
-    for(let i = 0; i < rowsUsername; i++){
-        console.log(await adminCheckBox.nth(i).textContent());
-        if( await adminCheckBox.locator('label').isVisible())
-            {
-                await adminCheckBox.locator('label').first().check();
-                adminTable--;
-                break;
-            }
-        }
+   //  await this.page.getByRole('row', { name: UserName }).locator('label').check();
+   //  await this.page.getByRole('row', { name: UserName }).locator('label').check();
+    let rowList = this.page.locator("//div[@role='row']//following::div[@role='cell']//following::div//following::label//input[@type='checkbox']//ancestor::div[@role='row']//child::div[contains(text(), '"+UserName+"')]")
+    for(var x = 0; x < rowList;  x++){
+      await this.rowList.nth(x).click()
+    }
 
+    let adminList = ['Dranreb', 'Yoo Nah']
+    for(const admin of adminList ){
+      await expect(this.page.getByText(admin)).toBeVisible();
+
+    }
    }
 }
