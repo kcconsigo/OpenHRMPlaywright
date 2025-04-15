@@ -5,7 +5,7 @@ const { PimPage } = require('../pages/pimpage.page');
 const credentials = JSON.parse(JSON.stringify(require("../utils/credentials.json")));
 const pimdetails = JSON.parse(JSON.stringify(require("../utils/pimdetails.json")));
   for (const pimdetailspage of pimdetails){
-  test(`should allow me to create Pim Employees ${credentials.validCredentials.username},${credentials.validCredentials.password}, ${pimdetailspage.firstName}, ${pimdetailspage.middleName}, ${pimdetailspage.lastName}, ${pimdetailspage.empID},${pimdetailspage.nationality[2]}, ${pimdetailspage.maritalstatus[1]}`, async ({ page }) => {
+  test(`should allow me to create Pim Employees ${credentials.validCredentials.username},${credentials.validCredentials.password}, ${pimdetailspage.firstName}, ${pimdetailspage.middleName}, ${pimdetailspage.lastName}, ${pimdetailspage.empID},${pimdetailspage.nationality[2]}, ${pimdetailspage.maritalstatus[1]},`, {tag: '@RegressionTesting'}, async ({ page }) => {
     const loginpage = new LoginPage(page);
     await loginpage.gotoLogin();
     await loginpage.loginCredentials(credentials.validCredentials.username, credentials.validCredentials.password);
