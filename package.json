@@ -9,8 +9,11 @@
   "type": "commonjs",
   "description": "",
   "devDependencies": {
+    "@allurereport/core-api": "3.0.0-beta.11",
+    "@allurereport/plugin-api": "3.0.0-beta.11",
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.17"
+    "@types/node": "^22.13.17",
+    "allure-commandline": "^2.33.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.2.0"
