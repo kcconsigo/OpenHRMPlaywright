@@ -14,8 +14,8 @@ exports.AdminDashboardPage = class AdminDashboardPage{
    async admindetailsRecords(UserName){  
     await this.page.mouse.wheel(0, 100);        
     await this.page.mouse.move(20, 40);
-   //  await this.page.getByRole('row', { name: UserName }).locator('label').check();
-   //  await this.page.getByRole('row', { name: UserName }).locator('label').check();
+    // await this.page.getByRole('row', { name: ' Dranreb Admin Robert James' }).locator('label').check();
+    // await this.page.getByRole('row', { name: ' Yoo Nah Admin Ronaldo Gibbs' }).locator('label').check();
     let rowList = this.page.locator("//div[@role='row']//following::div[@role='cell']//following::div//following::label//input[@type='checkbox']//ancestor::div[@role='row']//child::div[contains(text(), '"+UserName+"')]")
     for(var x = 0; x < rowList;  x++){
       await this.rowList.nth(x).click()
