@@ -22,11 +22,10 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+  reporter: process.env.CI ? 'github' : 'list',
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['list'],
-    ['json', {  outputFile: 'test-results.json' }]
-  ],
+  reporter: [["line"],["json", { outputFile: 'jsonReports/jsonReport.json' }],
+  ["junit", { outputFile: 'xmlnReports/xmlReport.xml' }],["allure-playwright", {outputFolder: 'openhrm-allure-results'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
