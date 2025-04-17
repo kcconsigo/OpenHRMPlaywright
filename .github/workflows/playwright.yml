@@ -1,4 +1,5 @@
-name: Open Source HR Management
+name: Open Source HR Management Workflow
+description: Open Source HR Management CI workflow template
 on:
   push:
     branches: [ main ]
