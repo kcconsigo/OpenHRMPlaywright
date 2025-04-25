@@ -1,0 +1,167 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: should allow me to create Pim Employees Admin,admin123, Robert James, Chen, Schneider, 1207,Filipino, Married
+- Location: C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\e2e\createPim.spec.js:8:3
+
+# Error details
+
+```
+Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+Locator: getByText('SuccessSuccessfully Saved×')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  - expect.toBeVisible with timeout 5000ms
+  - waiting for getByText('SuccessSuccessfully Saved×')
+
+    at PimPage.addEmployeeDetails (C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\pages\pimpage.page.js:27:44)
+    at C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\e2e\createPim.spec.js:17:5
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - navigation "Sidepanel":
+    - link "client brand banner":
+      - img "client brand banner"
+    - textbox "Search"
+    - button ""
+    - separator
+    - list:
+      - listitem:
+        - link "Admin"
+      - listitem:
+        - link "PIM"
+      - listitem:
+        - link "Leave"
+      - listitem:
+        - link "Time"
+      - listitem:
+        - link "Recruitment"
+      - listitem:
+        - link "My Info"
+      - listitem:
+        - link "Performance"
+      - listitem:
+        - link "Dashboard"
+      - listitem:
+        - link "Directory"
+      - listitem:
+        - link "Maintenance"
+      - listitem:
+        - link "Claim":
+          - img
+          - text: Claim
+      - listitem:
+        - link "Buzz"
+- banner:
+  - heading "PIM" [level=6]
+  - link "Upgrade":
+    - button "Upgrade"
+  - list:
+    - listitem:
+      - img "profile picture"
+      - paragraph: pava user
+      - text: 
+  - navigation "Topbar Menu":
+    - list:
+      - listitem: Configuration 
+      - listitem:
+        - link "Employee List"
+      - listitem:
+        - link "Add Employee"
+      - listitem:
+        - link "Reports"
+      - button ""
+- heading "Add Employee" [level=6]
+- separator
+- textbox
+- img "profile picture"
+- button ""
+- paragraph: "Accepts jpg, .png, .gif up to 1MB. Recommended dimensions: 200px X 200px"
+- text: Employee Full Name*
+- textbox "First Name": Robert James
+- textbox "Middle Name": Chen
+- textbox "Last Name": Schneider
+- text: Employee Id
+- textbox: "1207"
+- text: Employee Id already exists
+- separator
+- paragraph: Create Login Details
+- checkbox
+- separator
+- paragraph: "* Required"
+- button "Cancel"
+- button "Save"
+- paragraph: OrangeHRM OS 5.7
+- paragraph:
+  - text: © 2005 - 2025
+  - link "OrangeHRM, Inc"
+  - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+   1 | const { expect } = require('@playwright/test');
+   2 | import * as pimlocators from "../locators/pimpagelocators.json";
+   3 |
+   4 | exports.PimPage = class PimPage {
+   5 |
+   6 |        /**
+   7 |    * @param {import('@playwright/test').Page} page
+   8 |    */
+   9 |        constructor(page) {
+  10 |         this.page = page;
+  11 |         this.successfullyMsg = page.getByText('SuccessSuccessfully Saved×');
+  12 |     }
+  13 |     async PimTab(){
+  14 |         await this.page.locator(pimlocators.pimmenulocator.pimmenu).nth(1).click();
+  15 |     }
+  16 |     async addEmpTab(){
+  17 |         await this.page.locator(pimlocators.pimmenulocator.addempTab).nth(2).click();
+  18 |     }
+  19 |     async addEmployeeDetails(firstName, middleName, lastName, empID, nationality, maritalstatus){
+  20 |         await this.page.locator(pimlocators.pimmenulocator.addEmpFirstName).fill(firstName);
+  21 |         await this.page.locator(pimlocators.pimmenulocator.addEmpMidName).fill(middleName);
+  22 |         await this.page.locator(pimlocators.pimmenulocator.addEmpLastName).fill(lastName);
+  23 |         await this.page.locator(pimlocators.pimmenulocator.addEmpID).nth(4).fill(empID);
+  24 |         await expect(async () => {
+  25 |             await this.page.locator(pimlocators.pimmenulocator.addEmpbuttonSave).click({timeout: 1000});
+  26 |         }).toPass();
+> 27 |         await expect(this.successfullyMsg).toBeVisible(); 
+     |                                            ^ Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+  28 |         await this.page.locator(pimlocators.pimmenulocator.addEmpNationalityField).nth(0).click();     
+  29 |         await this.page.getByRole('option', { name: nationality }).click();
+  30 |         await this.page.locator(pimlocators.pimmenulocator.addEmpMaritalStatusField).nth(1).click();
+  31 |         await this.page.getByRole('option', { name: maritalstatus }).click();
+  32 |         await this.page.locator(pimlocators.pimmenulocator.addEmpInfoSave).nth(1).click();
+  33 |     }
+  34 |     async employeeListlandingTab(firstName){
+  35 |         await this.page.locator(pimlocators.pimmenulocator.pimmenu).nth(1).click();
+  36 |         await this.page.locator(pimlocators.listEmpNavTablocator.listEmpNavTab).nth(1).click();
+  37 |         await this.page.locator(pimlocators.listEmpNavTablocator.listEmployeeName).getByPlaceholder('Type for hints...')
+  38 |         .nth(0)
+  39 |         .fill(firstName);
+  40 |         const Empnames = await this.page.locator(pimlocators.listEmpNavTablocator.listEmployeeNameSelect).getByRole('option', { name: firstName });
+  41 |         for(let i = 0; i < Empnames; i++){
+  42 |             if(await Empnames.toBeVisible()){
+  43 |                 await Empnames.nth(i).click();
+  44 |                 return Empnames;
+  45 |             }  
+  46 |             return i;          
+  47 |         }
+  48 |         await this.page.locator(pimlocators.listEmpNavTablocator.listEmpSearchbtn).click();
+  49 |         await this.page.locator(pimlocators.listEmpNavTablocator.editEmplistbtn).nth(3).click();
+  50 |     }
+  51 |     
+  52 | }
+```

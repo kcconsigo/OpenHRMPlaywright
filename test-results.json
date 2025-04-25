@@ -58,106 +58,125 @@
   },
   "suites": [
     {
-      "title": "createPim.spec.js",
-      "file": "createPim.spec.js",
+      "title": "createAdmin.spec.js",
+      "file": "createAdmin.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "should allow me to create Pim Employees Admin,admin123, Robert James, Chen, Schneider, 1207,Filipino, Married",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Login Page",
+          "file": "createAdmin.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 150000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "should allow me to create Admin Admin, admin123, Robert James Chen Schneider, Dranreb,D3vT3$t3rR0l305,D3vT3$t3rR0l305",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 19014,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-04-16T14:47:56.981Z",
-                  "attachments": [
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--26890-eider-1207-Filipino-Married-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--26890-eider-1207-Filipino-Married-chromium\\video.webm"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18735,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "SuccessSuccessfully Saved×\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-04-17T08:27:02.422Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-aedda-3-t3rR0l305-D3vT3-t3rR0l305-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-aedda-3-t3rR0l305-D3vT3-t3rR0l305-chromium\\video.webm"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "d0bc071c65b6c0b44f7c-3fd5a73194825b43bebd",
-          "file": "createPim.spec.js",
-          "line": 8,
-          "column": 3
-        },
-        {
-          "title": "should allow me to create Pim Employees Admin,admin123, Ronaldo, Valdez, Gibbs, 2402,Filipino, Married",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "55d873ff560eade9d305-53750ef8bb077e6d08e7",
+              "file": "createAdmin.spec.js",
+              "line": 10,
+              "column": 5
+            },
             {
-              "timeout": 150000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "should allow me to create Admin Admin, admin123, Ronaldo Valdez Gibbs, Yoo Nah,P@$$w0rd$hit@ss2,P@$$w0rd$hit@ss2",
+              "ok": true,
+              "tags": [
+                "$$w0rd$hit@ss2,P@$$w0rd$hit@ss2"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 20097,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-04-16T14:48:16.192Z",
-                  "attachments": [
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--ba34c-Gibbs-2402-Filipino-Married-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--ba34c-Gibbs-2402-Filipino-Married-chromium\\video.webm"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16496,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "SuccessSuccessfully Saved×\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-04-17T08:27:21.358Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-cc734-w0rd-hit-ss2-P-w0rd-hit-ss2-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-cc734-w0rd-hit-ss2-P-w0rd-hit-ss2-chromium\\video.webm"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "55d873ff560eade9d305-70944989cf9f1d788bb5",
+              "file": "createAdmin.spec.js",
+              "line": 10,
+              "column": 5
             }
-          ],
-          "id": "d0bc071c65b6c0b44f7c-c02e6dbad54ad4bfc6b5",
-          "file": "createPim.spec.js",
-          "line": 8,
-          "column": 3
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-04-16T14:47:56.237Z",
-    "duration": 40267.693,
+    "startTime": "2025-04-17T08:27:01.654Z",
+    "duration": 36446.08,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,

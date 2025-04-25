@@ -1,0 +1,545 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\playwright.config.js",
+    "rootDir": "C:/Users/Kc Cabelin/Desktop/PlaywrightOrangeHRM/OpenHRMPlaywright/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "xmlnReports/xmlReport.xml"
+        }
+      ],
+      [
+        "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "openhrm-allure-results"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Kc Cabelin/Desktop/PlaywrightOrangeHRM/OpenHRMPlaywright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Kc Cabelin/Desktop/PlaywrightOrangeHRM/OpenHRMPlaywright/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.1",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "adminDashboard.spec.js",
+      "file": "adminDashboard.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "should allow me to select Admin details Admin, admin123, undefined",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "interrupted",
+                  "duration": 10030,
+                  "error": {
+                    "message": "Error: locator.fill: Target page, context or browser has been closed",
+                    "stack": "Error: locator.fill: Target page, context or browser has been closed\n    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\n    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\adminDashboard.spec.js:11:21",
+                    "location": {
+                      "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                      "column": 29,
+                      "line": 28
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                        "column": 29,
+                        "line": 28
+                      },
+                      "message": "Error: locator.fill: Target page, context or browser has been closed\n\n\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m\n\u001b[2m    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\adminDashboard.spec.js:11:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-04-17T12:24:51.089Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\adminDashboard-should-allo-a54dd-ls-Admin-admin123-undefined-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\adminDashboard-should-allo-a54dd-ls-Admin-admin123-undefined-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                    "column": 29,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "3e18ba41fbbd5c313111-1edeb707202dd9964a90",
+          "file": "adminDashboard.spec.js",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "createAdmin.spec.js",
+      "file": "createAdmin.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Page",
+          "file": "createAdmin.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should allow me to create Admin Admin, admin123, Robert James Chen Schneider, Dranreb,D3vT3$t3rR0l305,D3vT3$t3rR0l305",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "interrupted",
+                      "duration": 7129,
+                      "error": {
+                        "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Username' })\u001b[22m\n",
+                        "stack": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Username' })\u001b[22m\n\n    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\n    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\createAdmin.spec.js:13:23",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                          "column": 29,
+                          "line": 28
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                            "column": 29,
+                            "line": 28
+                          },
+                          "message": "Error: locator.fill: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Username' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m\n\u001b[2m    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\createAdmin.spec.js:13:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-04-17T12:24:51.096Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-aedda-3-t3rR0l305-D3vT3-t3rR0l305-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createAdmin-Login-Page-sho-aedda-3-t3rR0l305-D3vT3-t3rR0l305-chromium\\video.webm"
+                        },
+                        {
+                          "name": "_prompt-0",
+                          "contentType": "text/markdown",
+                          "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBMb2dpbiBQYWdlID4+IHNob3VsZCBhbGxvdyBtZSB0byBjcmVhdGUgQWRtaW4gQWRtaW4sIGFkbWluMTIzLCBSb2JlcnQgSmFtZXMgQ2hlbiBTY2huZWlkZXIsIERyYW5yZWIsRDN2VDMkdDNyUjBsMzA1LEQzdlQzJHQzclIwbDMwNQotIExvY2F0aW9uOiBDOlxVc2Vyc1xLYyBDYWJlbGluXERlc2t0b3BcUGxheXdyaWdodE9yYW5nZUhSTVxPcGVuSFJNUGxheXdyaWdodFxlMmVcY3JlYXRlQWRtaW4uc3BlYy5qczoxMDo1CgojIEVycm9yIGRldGFpbHMKCmBgYApFcnJvcjogbG9jYXRvci5maWxsOiBUZXN0IGVuZGVkLgpDYWxsIGxvZzoKICAtIHdhaXRpbmcgZm9yIGdldEJ5Um9sZSgndGV4dGJveCcsIHsgbmFtZTogJ1VzZXJuYW1lJyB9KQoKICAgIGF0IExvZ2luUGFnZS5sb2dpbkNyZWRlbnRpYWxzIChDOlxVc2Vyc1xLYyBDYWJlbGluXERlc2t0b3BcUGxheXdyaWdodE9yYW5nZUhSTVxPcGVuSFJNUGxheXdyaWdodFxwYWdlc1xsb2dpbnBhZ2UucGFnZS5qczoyODoyOSkKICAgIGF0IEM6XFVzZXJzXEtjIENhYmVsaW5cRGVza3RvcFxQbGF5d3JpZ2h0T3JhbmdlSFJNXE9wZW5IUk1QbGF5d3JpZ2h0XGUyZVxjcmVhdGVBZG1pbi5zcGVjLmpzOjEzOjIzCmBgYAoKIyBUZXN0IHNvdXJjZQoKYGBgdHMKICAgMSB8IGNvbnN0IHsgZXhwZWN0LCBjaHJvbWl1bSB9ID0gcmVxdWlyZSgnQHBsYXl3cmlnaHQvdGVzdCcpOwogICAyIHwKICAgMyB8IGV4cG9ydHMuTG9naW5QYWdlID0gY2xhc3MgTG9naW5QYWdlIHsKICAgNCB8CiAgIDUgfCAgICAgICAgLyoqCiAgIDYgfCAgICAqIEBwYXJhbSB7aW1wb3J0KCdAcGxheXdyaWdodC90ZXN0JykuUGFnZX0gcGFnZQogICA3IHwgICAgKi8KICAgOCB8CiAgIDkgfCAgICAgY29uc3RydWN0b3IocGFnZSl7CiAgMTAgfCAgICAgICAgIHRoaXMucGFnZSA9IHBhZ2U7CiAgMTEgfCAgICAgICAgIHRoaXMudXNlck5hbWUgPSBwYWdlLmdldEJ5Um9sZSgndGV4dGJveCcsIHsgbmFtZTogJ1VzZXJuYW1lJyB9KTsKICAxMiB8ICAgICAgICAgdGhpcy51c2VyUGFzc3dvcmQgPSBwYWdlLmdldEJ5Um9sZSgndGV4dGJveCcsIHsgbmFtZTogJ1Bhc3N3b3JkJyB9KTsKICAxMyB8ICAgICAgICAgdGhpcy5sb2dpbkJ1dHRvbiA9IHBhZ2UuZ2V0QnlSb2xlKCdidXR0b24nLCB7IG5hbWU6ICdMb2dpbicgfSk7CiAgMTQgfCAgICAgICAgIHRoaXMubG9nb3V0SXRlbSA9IHBhZ2UubG9jYXRvcignLm94ZC11c2VyZHJvcGRvd24nKTsKICAxNSB8ICAgICAgICAgdGhpcy5sb2dvdXRCdXR0b24gPSBwYWdlLmdldEJ5Um9sZSgnbWVudWl0ZW0nLCB7IG5hbWU6ICdMb2dvdXQnIH0pOwogIDE2IHwgICAgICAgICB0aGlzLmVycm9yX21zZyA9IHBhZ2UuZ2V0QnlSb2xlKCdhbGVydCcpLmxvY2F0b3IoJ2RpdicpLmZpbHRlcih7IGhhc1RleHQ6ICdJbnZhbGlkIGNyZWRlbnRpYWxzJyB9KTsKICAxNyB8ICAgICB9ICAgCiAgMTggfAogIDE5IHwgICAgIGFzeW5jIGdvdG9Mb2dpbigpewogIDIwIHwgICAgICAgICBjb25zdCBicm93c2VyID0gYXdhaXQgY2hyb21pdW0ubGF1bmNoKCk7CiAgMjEgfCAgICAgICAgIGNvbnN0IGNvbnRleHQgPSBhd2FpdCBicm93c2VyLm5ld0NvbnRleHQoKTsKICAyMiB8ICAgICAgICAgLy8gY29uc3QgcGFnZSA9IGF3YWl0IGNvbnRleHQubmV3UGFnZSgpOwogIDIzIHwgICAgICAgICBhd2FpdCB0aGlzLnBhZ2UuZ290bygnaHR0cHM6Ly9vcGVuc291cmNlLWRlbW8ub3JhbmdlaHJtbGl2ZS5jb20vd2ViL2luZGV4LnBocC9hdXRoL2xvZ2luJyk7CiAgMjQgfCAgICAgICAgIGF3YWl0IGV4cGVjdCh0aGlzLnBhZ2UpLnRvSGF2ZVVSTCgnaHR0cHM6Ly9vcGVuc291cmNlLWRlbW8ub3JhbmdlaHJtbGl2ZS5jb20vd2ViL2luZGV4LnBocC9hdXRoL2xvZ2luJyk7CiAgMjUgfCAgICAgICAgIGF3YWl0IGJyb3dzZXIuY2xvc2UoKTsKICAyNiB8ICAgICB9CiAgMjcgfCAgICAgYXN5bmMgbG9naW5DcmVkZW50aWFscyh1c2VybmFtZSwgcGFzc3dvcmQpewo+IDI4IHwgICAgICAgICBhd2FpdCB0aGlzLnVzZXJOYW1lLmZpbGwodXNlcm5hbWUpOwogICAgIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF4gRXJyb3I6IGxvY2F0b3IuZmlsbDogVGVzdCBlbmRlZC4KICAyOSB8ICAgICAgICAgYXdhaXQgdGhpcy51c2VyUGFzc3dvcmQuZmlsbChwYXNzd29yZCk7CiAgMzAgfCAgICAgfQogIDMxIHwgICAgIGFzeW5jIGxvZ2luQnRuKCl7CiAgMzIgfCAgICAgICAgIGF3YWl0IHRoaXMubG9naW5CdXR0b24uY2xpY2soKTsKICAzMyB8ICAgICB9CiAgMzQgfCAgICAgYXN5bmMgbG9nb3V0SXRlbUJ0bigpewogIDM1IHwgICAgICAgICBhd2FpdCB0aGlzLmxvZ291dEl0ZW0uY2xpY2soeyB0aW1lb3V0OiAzMDAwIH0pOwogIDM2IHwgICAgIH0KICAzNyB8ICAgICBhc3luYyBsb2dvdXRCdG4oKXsKICAzOCB8ICAgICAgICAgYXdhaXQgdGhpcy5sb2dvdXRCdXR0b24uY2xpY2soeyB0aW1lb3V0OiAzMDAwIH0pOwogIDM5IHwgICAgIH0KICA0MCB8ICAgICBhc3luYyB2ZXJpZnllcnJfbXNnKCl7CiAgNDEgfCAgICAgICAgIHJldHVybiBhd2FpdCBleHBlY3QodGhpcy5lcnJvcl9tc2cpLnRvSGF2ZVRleHQoJ0ludmFsaWQgY3JlZGVudGlhbHMnKTsKICA0MiB8ICAgICB9CiAgNDMgfCB9CmBgYA=="
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                        "column": 29,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "55d873ff560eade9d305-53750ef8bb077e6d08e7",
+              "file": "createAdmin.spec.js",
+              "line": 10,
+              "column": 5
+            },
+            {
+              "title": "should allow me to create Admin Admin, admin123, Ronaldo Valdez Gibbs, Yoo Nah,P@$$w0rd$hit@ss2,P@$$w0rd$hit@ss2",
+              "ok": true,
+              "tags": [
+                "$$w0rd$hit@ss2,P@$$w0rd$hit@ss2"
+              ],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "55d873ff560eade9d305-70944989cf9f1d788bb5",
+              "file": "createAdmin.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "createPim.spec.js",
+      "file": "createPim.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "should allow me to create Pim Employees Admin,admin123, Robert James, Chen, Schneider, 1207,Filipino, Married",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "interrupted",
+                  "duration": 7363,
+                  "error": {
+                    "message": "Error: locator.fill: Target page, context or browser has been closed",
+                    "stack": "Error: locator.fill: Target page, context or browser has been closed\n    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\n    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\createPim.spec.js:11:21",
+                    "location": {
+                      "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                      "column": 29,
+                      "line": 28
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                        "column": 29,
+                        "line": 28
+                      },
+                      "message": "Error: locator.fill: Target page, context or browser has been closed\n\n\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     }\n \u001b[90m 27 |\u001b[39m     \u001b[36masync\u001b[39m loginCredentials(username\u001b[33m,\u001b[39m password){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserName\u001b[33m.\u001b[39mfill(username)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserPassword\u001b[33m.\u001b[39mfill(password)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m     }\n \u001b[90m 31 |\u001b[39m     \u001b[36masync\u001b[39m loginBtn(){\u001b[0m\n\u001b[2m    at LoginPage.loginCredentials (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:28:29)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\createPim.spec.js:11:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-04-17T12:24:51.094Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--26890-eider-1207-Filipino-Married-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\createPim-should-allow-me--26890-eider-1207-Filipino-Married-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                    "column": 29,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d0bc071c65b6c0b44f7c-3fd5a73194825b43bebd",
+          "file": "createPim.spec.js",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "should allow me to create Pim Employees Admin,admin123, Ronaldo, Valdez, Gibbs, 2402,Filipino, Married",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d0bc071c65b6c0b44f7c-c02e6dbad54ad4bfc6b5",
+          "file": "createPim.spec.js",
+          "line": 8,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "example.spec.js",
+      "file": "example.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "has title",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "interrupted",
+                  "duration": 10958,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-04-17T12:24:51.087Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\example-has-title-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\example-has-title-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-fe3fbe2603922999b144",
+          "file": "example.spec.js",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "get started link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "dd9b2edffe9b7501040c-18206e4c4b88f5cba6b3",
+          "file": "example.spec.js",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "loginUser.spec.js",
+      "file": "loginUser.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Page",
+          "file": "loginUser.spec.js",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should allow me to enter valid credentials Admin, admin123",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "interrupted",
+                      "duration": 11999,
+                      "error": {
+                        "message": "Error: page.goto: Test ended.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Test ended.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"load\"\u001b[22m\n\n    at LoginPage.gotoLogin (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:23:25)\n    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\loginUser.spec.js:14:5",
+                        "location": {
+                          "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                          "column": 25,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[90m// const page = await context.newPage();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                            "column": 25,
+                            "line": 23
+                          },
+                          "message": "Error: page.goto: Test ended.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\loginpage.page.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m         \u001b[36mconst\u001b[39m context \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[90m// const page = await context.newPage();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     }\u001b[0m\n\u001b[2m    at LoginPage.gotoLogin (C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js:23:25)\u001b[22m\n\u001b[2m    at C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\e2e\\loginUser.spec.js:14:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-04-17T12:24:51.126Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\test-results\\loginUser-Login-Page-shoul-54703--credentials-Admin-admin123-chromium\\video.webm"
+                        },
+                        {
+                          "name": "_prompt-0",
+                          "contentType": "text/markdown",
+                          "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBMb2dpbiBQYWdlID4+IHNob3VsZCBhbGxvdyBtZSB0byBlbnRlciB2YWxpZCBjcmVkZW50aWFscyBBZG1pbiwgYWRtaW4xMjMKLSBMb2NhdGlvbjogQzpcVXNlcnNcS2MgQ2FiZWxpblxEZXNrdG9wXFBsYXl3cmlnaHRPcmFuZ2VIUk1cT3BlbkhSTVBsYXl3cmlnaHRcZTJlXGxvZ2luVXNlci5zcGVjLmpzOjExOjMKCiMgRXJyb3IgZGV0YWlscwoKYGBgCkVycm9yOiBwYWdlLmdvdG86IFRlc3QgZW5kZWQuCkNhbGwgbG9nOgogIC0gbmF2aWdhdGluZyB0byAiaHR0cHM6Ly9vcGVuc291cmNlLWRlbW8ub3JhbmdlaHJtbGl2ZS5jb20vd2ViL2luZGV4LnBocC9hdXRoL2xvZ2luIiwgd2FpdGluZyB1bnRpbCAibG9hZCIKCiAgICBhdCBMb2dpblBhZ2UuZ290b0xvZ2luIChDOlxVc2Vyc1xLYyBDYWJlbGluXERlc2t0b3BcUGxheXdyaWdodE9yYW5nZUhSTVxPcGVuSFJNUGxheXdyaWdodFxwYWdlc1xsb2dpbnBhZ2UucGFnZS5qczoyMzoyNSkKICAgIGF0IEM6XFVzZXJzXEtjIENhYmVsaW5cRGVza3RvcFxQbGF5d3JpZ2h0T3JhbmdlSFJNXE9wZW5IUk1QbGF5d3JpZ2h0XGUyZVxsb2dpblVzZXIuc3BlYy5qczoxNDo1CmBgYAoKIyBUZXN0IHNvdXJjZQoKYGBgdHMKICAgMSB8IGNvbnN0IHsgZXhwZWN0LCBjaHJvbWl1bSB9ID0gcmVxdWlyZSgnQHBsYXl3cmlnaHQvdGVzdCcpOwogICAyIHwKICAgMyB8IGV4cG9ydHMuTG9naW5QYWdlID0gY2xhc3MgTG9naW5QYWdlIHsKICAgNCB8CiAgIDUgfCAgICAgICAgLyoqCiAgIDYgfCAgICAqIEBwYXJhbSB7aW1wb3J0KCdAcGxheXdyaWdodC90ZXN0JykuUGFnZX0gcGFnZQogICA3IHwgICAgKi8KICAgOCB8CiAgIDkgfCAgICAgY29uc3RydWN0b3IocGFnZSl7CiAgMTAgfCAgICAgICAgIHRoaXMucGFnZSA9IHBhZ2U7CiAgMTEgfCAgICAgICAgIHRoaXMudXNlck5hbWUgPSBwYWdlLmdldEJ5Um9sZSgndGV4dGJveCcsIHsgbmFtZTogJ1VzZXJuYW1lJyB9KTsKICAxMiB8ICAgICAgICAgdGhpcy51c2VyUGFzc3dvcmQgPSBwYWdlLmdldEJ5Um9sZSgndGV4dGJveCcsIHsgbmFtZTogJ1Bhc3N3b3JkJyB9KTsKICAxMyB8ICAgICAgICAgdGhpcy5sb2dpbkJ1dHRvbiA9IHBhZ2UuZ2V0QnlSb2xlKCdidXR0b24nLCB7IG5hbWU6ICdMb2dpbicgfSk7CiAgMTQgfCAgICAgICAgIHRoaXMubG9nb3V0SXRlbSA9IHBhZ2UubG9jYXRvcignLm94ZC11c2VyZHJvcGRvd24nKTsKICAxNSB8ICAgICAgICAgdGhpcy5sb2dvdXRCdXR0b24gPSBwYWdlLmdldEJ5Um9sZSgnbWVudWl0ZW0nLCB7IG5hbWU6ICdMb2dvdXQnIH0pOwogIDE2IHwgICAgICAgICB0aGlzLmVycm9yX21zZyA9IHBhZ2UuZ2V0QnlSb2xlKCdhbGVydCcpLmxvY2F0b3IoJ2RpdicpLmZpbHRlcih7IGhhc1RleHQ6ICdJbnZhbGlkIGNyZWRlbnRpYWxzJyB9KTsKICAxNyB8ICAgICB9ICAgCiAgMTggfAogIDE5IHwgICAgIGFzeW5jIGdvdG9Mb2dpbigpewogIDIwIHwgICAgICAgICBjb25zdCBicm93c2VyID0gYXdhaXQgY2hyb21pdW0ubGF1bmNoKCk7CiAgMjEgfCAgICAgICAgIGNvbnN0IGNvbnRleHQgPSBhd2FpdCBicm93c2VyLm5ld0NvbnRleHQoKTsKICAyMiB8ICAgICAgICAgLy8gY29uc3QgcGFnZSA9IGF3YWl0IGNvbnRleHQubmV3UGFnZSgpOwo+IDIzIHwgICAgICAgICBhd2FpdCB0aGlzLnBhZ2UuZ290bygnaHR0cHM6Ly9vcGVuc291cmNlLWRlbW8ub3JhbmdlaHJtbGl2ZS5jb20vd2ViL2luZGV4LnBocC9hdXRoL2xvZ2luJyk7CiAgICAgfCAgICAgICAgICAgICAgICAgICAgICAgICBeIEVycm9yOiBwYWdlLmdvdG86IFRlc3QgZW5kZWQuCiAgMjQgfCAgICAgICAgIGF3YWl0IGV4cGVjdCh0aGlzLnBhZ2UpLnRvSGF2ZVVSTCgnaHR0cHM6Ly9vcGVuc291cmNlLWRlbW8ub3JhbmdlaHJtbGl2ZS5jb20vd2ViL2luZGV4LnBocC9hdXRoL2xvZ2luJyk7CiAgMjUgfCAgICAgICAgIGF3YWl0IGJyb3dzZXIuY2xvc2UoKTsKICAyNiB8ICAgICB9CiAgMjcgfCAgICAgYXN5bmMgbG9naW5DcmVkZW50aWFscyh1c2VybmFtZSwgcGFzc3dvcmQpewogIDI4IHwgICAgICAgICBhd2FpdCB0aGlzLnVzZXJOYW1lLmZpbGwodXNlcm5hbWUpOwogIDI5IHwgICAgICAgICBhd2FpdCB0aGlzLnVzZXJQYXNzd29yZC5maWxsKHBhc3N3b3JkKTsKICAzMCB8ICAgICB9CiAgMzEgfCAgICAgYXN5bmMgbG9naW5CdG4oKXsKICAzMiB8ICAgICAgICAgYXdhaXQgdGhpcy5sb2dpbkJ1dHRvbi5jbGljaygpOwogIDMzIHwgICAgIH0KICAzNCB8ICAgICBhc3luYyBsb2dvdXRJdGVtQnRuKCl7CiAgMzUgfCAgICAgICAgIGF3YWl0IHRoaXMubG9nb3V0SXRlbS5jbGljayh7IHRpbWVvdXQ6IDMwMDAgfSk7CiAgMzYgfCAgICAgfQogIDM3IHwgICAgIGFzeW5jIGxvZ291dEJ0bigpewogIDM4IHwgICAgICAgICBhd2FpdCB0aGlzLmxvZ291dEJ1dHRvbi5jbGljayh7IHRpbWVvdXQ6IDMwMDAgfSk7CiAgMzkgfCAgICAgfQogIDQwIHwgICAgIGFzeW5jIHZlcmlmeWVycl9tc2coKXsKICA0MSB8ICAgICAgICAgcmV0dXJuIGF3YWl0IGV4cGVjdCh0aGlzLmVycm9yX21zZykudG9IYXZlVGV4dCgnSW52YWxpZCBjcmVkZW50aWFscycpOwogIDQyIHwgICAgIH0KICA0MyB8IH0KYGBg"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Kc Cabelin\\Desktop\\PlaywrightOrangeHRM\\OpenHRMPlaywright\\pages\\loginpage.page.js",
+                        "column": 25,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f5613f76bf59474ef89f-0510835743e6e3150858",
+              "file": "loginUser.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "should not allow me to enter invalid credentials admin@#$$R9^, %^#$0admin123",
+              "ok": true,
+              "tags": [
+                "#$$R9^,"
+              ],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f5613f76bf59474ef89f-ab4b147306141e34a15f",
+              "file": "loginUser.spec.js",
+              "line": 21,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-04-17T12:24:50.169Z",
+    "duration": 13650.732,
+    "expected": 0,
+    "skipped": 9,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
