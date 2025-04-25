@@ -10,10 +10,14 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 
 <h4> Installing Playwright </h4>
 npm init playwright@latest
+
 npx playwright test
+
 npx playwright test --ui
+
 npm install -D @playwright/test@latest
 # Also download new browser binaries and their dependencies:
 npx playwright install --with-deps
+
 npx playwright --version
 
