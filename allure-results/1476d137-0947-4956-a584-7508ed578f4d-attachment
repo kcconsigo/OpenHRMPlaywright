@@ -1,0 +1,70 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Login Page >> should allow me to enter valid credentials Admin, admin123
+- Location: C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\e2e\loginUser.spec.js:11:3
+
+# Error details
+
+```
+Error: page.goto: Test ended.
+Call log:
+  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+    at LoginPage.gotoLogin (C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\pages\loginpage.page.js:23:25)
+    at C:\Users\Kc Cabelin\Desktop\PlaywrightOrangeHRM\OpenHRMPlaywright\e2e\loginUser.spec.js:14:5
+```
+
+# Test source
+
+```ts
+   1 | const { expect, chromium } = require('@playwright/test');
+   2 |
+   3 | exports.LoginPage = class LoginPage {
+   4 |
+   5 |        /**
+   6 |    * @param {import('@playwright/test').Page} page
+   7 |    */
+   8 |
+   9 |     constructor(page){
+  10 |         this.page = page;
+  11 |         this.userName = page.getByRole('textbox', { name: 'Username' });
+  12 |         this.userPassword = page.getByRole('textbox', { name: 'Password' });
+  13 |         this.loginButton = page.getByRole('button', { name: 'Login' });
+  14 |         this.logoutItem = page.locator('.oxd-userdropdown');
+  15 |         this.logoutButton = page.getByRole('menuitem', { name: 'Logout' });
+  16 |         this.error_msg = page.getByRole('alert').locator('div').filter({ hasText: 'Invalid credentials' });
+  17 |     }   
+  18 |
+  19 |     async gotoLogin(){
+  20 |         const browser = await chromium.launch();
+  21 |         const context = await browser.newContext();
+  22 |         // const page = await context.newPage();
+> 23 |         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+     |                         ^ Error: page.goto: Test ended.
+  24 |         await expect(this.page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  25 |         await browser.close();
+  26 |     }
+  27 |     async loginCredentials(username, password){
+  28 |         await this.userName.fill(username);
+  29 |         await this.userPassword.fill(password);
+  30 |     }
+  31 |     async loginBtn(){
+  32 |         await this.loginButton.click();
+  33 |     }
+  34 |     async logoutItemBtn(){
+  35 |         await this.logoutItem.click({ timeout: 3000 });
+  36 |     }
+  37 |     async logoutBtn(){
+  38 |         await this.logoutButton.click({ timeout: 3000 });
+  39 |     }
+  40 |     async verifyerr_msg(){
+  41 |         return await expect(this.error_msg).toHaveText('Invalid credentials');
+  42 |     }
+  43 | }
+```
