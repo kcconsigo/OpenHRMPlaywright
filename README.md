@@ -8,6 +8,12 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 <h5> Playwright for Automation and node.js and javascript for programming language
 <br> Github Actions and Jenkins for CICD Integration tool </br> </h5>
 
-<h2> Installing Playwright </h2>
-(https://github.com/user-attachments/assets/a8eff28f-b42d-409f-b3b9-c47964fe30de)
+<h4> Installing Playwright </h4>
+npm init playwright@latest
+npx playwright test
+npx playwright test --ui
+npm install -D @playwright/test@latest
+# Also download new browser binaries and their dependencies:
+npx playwright install --with-deps
+npx playwright --version
 
