@@ -9,3 +9,5 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 <br> Github Actions and Jenkins for CICD Integration tool </br> </h5>
 
 <h2> Installing Playwright </h2>
+![image](https://github.com/user-attachments/assets/a8eff28f-b42d-409f-b3b9-c47964fe30de)
+
