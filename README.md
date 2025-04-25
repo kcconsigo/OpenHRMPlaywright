@@ -4,7 +4,7 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 
 <h3> This automation framework adds Admin and Employee, Edit Employee's Information, and Delete the Employee's Information</h3>
 
-# <h4> <b> </b>Framework and Tools used: </b> </h4>
+# <b> </b>Framework and Tools used: </b>
 <h5> Playwright for Automation and node.js and javascript for programming language
   
 <br> Github Actions and Jenkins for CICD Integration tool </br> </h5>
