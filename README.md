@@ -16,6 +16,8 @@ npx playwright test
 
 npx playwright test --ui
 
+npx playwright test --headed
+
 npm install -D @playwright/test@latest
 # Also download new browser binaries and their dependencies:
 npx playwright install --with-deps
