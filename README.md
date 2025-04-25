@@ -8,7 +8,7 @@ Project Name: demo.orangehrmlive-Playwright Project End to End test built in Pag
 <h5> Playwright for Automation and node.js and javascript for programming language
 <br> Github Actions and Jenkins for CICD Integration tool </br> </h5>
 
-<h4> Installing Playwright </h4>
+# Installing Playwright 
 npm init playwright@latest
 
 npx playwright test
