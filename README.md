@@ -21,5 +21,6 @@ npx playwright install --with-deps
 
 npx playwright --version
 
+# Running codegen and web locators:
 npx playwright codegen demo.playwright.dev/todomvc
 
