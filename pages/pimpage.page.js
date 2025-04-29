@@ -37,8 +37,8 @@ exports.PimPage = class PimPage {
         await this.page.locator(pimlocators.listEmpNavTablocator.listEmployeeName).getByPlaceholder('Type for hints...')
         .nth(0)
         .fill(firstName);
-        const Empnames = await this.page.locator(pimlocators.listEmpNavTablocator.listEmployeeNameSelect).getByRole('option', { name: firstName });
-        for(let i = 0; i < Empnames; i++){
+        const Empnames = this.page.locator(pimlocators.listEmpNavTablocator.listEmployeeNameSelect).getByRole('option', { name: firstName });
+        for(let i = 0; i < Empnames.count(); i++){
             if(await Empnames.toBeVisible()){
                 await Empnames.nth(i).click();
                 return Empnames;
